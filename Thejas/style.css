@@ -1,0 +1,687 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(109, 67, 0);
+    text-shadow: 0 0 10px rgb(109, 67, 0);
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+    .links a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: rgb(109, 67, 0);
+        font-weight: 500;
+        position: relative;
+    }
+
+        .links a:hover::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgb(109, 67, 0);
+        }
+
+.contact-image img {
+    width: 180%;
+    max-width: 450px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-image p {
+    text-align: center;
+    font-size: 30px;
+    color: #555;
+}
+
+.contact-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(109, 67, 0);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .contact-btn:hover {
+        background: rgb(109, 67, 0);
+        color: white;
+    }
+
+section {
+    width: 100%;
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+    section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(109, 67, 0);
+    }
+
+    section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: rgb(109, 67, 0);
+    transition: transform 0.3s;
+}
+
+    .social-links a:hover {
+        transform: scale(1.2);
+    }
+/* General Section Styling */
+section {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    min-height: 100vh; /* Each section takes the full height of the viewport */
+    padding: 40px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+/* Home Section Styling */
+#home {
+    background-color: #f4f4f4; /* Background specific to the Home tab */
+}
+
+/* About Section Styling */
+#about {
+    background-color: #e9ecef; /* Background specific to About tab */
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #ffffff; /* Background specific to Skills tab */
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #f9f9f9; /* Background specific to Contact tab */
+}
+
+/* Image Styling */
+.image {
+    flex: 0.8; /* Adjust width for image sections */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .image img {
+        width: 75%; /* Image size control */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Fit the image inside the container */
+    }
+
+/* Content Styling */
+.content {
+    flex: 1.2;
+    max-width: 50%; /* Ensure content width doesn't exceed half the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    .image {
+        flex: none;
+        height: auto; /* Allow image to adapt to content size */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .content {
+        max-width: 100%; /* Allow content to take full width */
+    }
+}
+ 
+#home {
+    background: linear-gradient(to right, rgb(254, 215, 173), rgb(255, 255, 255));
+}
+
+/* Home Section Styling */
+#home {
+    display: flex;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 0;
+    margin: 0;
+}
+
+/* Left section (image) */
+.image {
+    flex: 0.8; /* Further reduce the width of the image section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no parts of the image overflow */
+}
+
+    .image img {
+        width: 75%; /* Further reduce the size of the image */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits without cropping */
+        border-radius: 8px; /* Optional: Add rounded corners for aesthetics */
+    }
+
+/* Right section (content) */
+.content {
+    flex: 1.2; /* Adjust content width to balance the layout */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%; /* Ensure content stays within half the screen width */
+}
+
+/* Right section (content) */
+.content {
+    flex: 1; /* Keep the content width unchanged */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%; /* Ensure content stays within half the screen width */
+}
+
+
+/* Right section (content) */
+.content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%; /* Ensures content doesn't overflow */
+}
+
+    .content h1 {
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+        .content h1 span {
+            color: #4CAF50; /* Green accent color for the name */
+        }
+
+    .content p {
+        font-size: 18px;
+        line-height: 1;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .content .btn button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .content .btn button:hover {
+            background-color: #45a049;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .image {
+        flex: none;
+        height: 40%; /* Make the image occupy half the screen on small devices */
+    }
+
+        .image img {
+            height: 800%;
+        }
+
+    .content {
+        flex: none;
+        max-width: 90%;
+        text-align: center;
+    }
+
+        .content h1 {
+            font-size: 32px;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+}
+
+/* Main container for the left and right sections */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the width for larger screens */
+    margin: 0 auto;
+}
+
+/* Style the left section (image) */
+.image {
+    flex: 1;
+    max-width: 50%; /* Ensure the image takes up 50% of the screen */
+    overflow: hidden;
+}
+
+    .image img {
+        width: 100%;
+        height: 100%; /* Ensures the image covers the space */
+        object-fit: fill; /* Ensures the image scales nicely without distortion */
+    }
+
+/* Style the right section (content) */
+.content {
+    flex: 1;
+    max-width: 50%; /* Ensure the content takes up the right half */
+    padding-left: 70px;
+}
+
+    /* Heading styles */
+    .content h1 {
+        font-size: 56px;
+        font-weight: bold;
+        color: #333;
+    }
+
+        .content h1 span {
+            color: #4CAF50; 
+        }
+
+    /* Paragraph styling */
+    .content p {
+        font-size: 48px;
+        line-height: 13;
+        color: #555;
+        margin-top: 40px;
+    }
+
+    /* Button Styling */
+    .content .btn button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+
+        .content .btn button:hover {
+            background-color: #45a049;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack the image and content vertically on small screens */
+        padding: 40px 20px;
+    }
+
+    .image {
+        max-width: 100%; /* Ensure the image takes up full width */
+        margin-bottom: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center; /* Center the text on small screens */
+    }
+
+        .content h1 {
+            font-size: 28px;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+}
+
+
+/* Main container for the left and right sections */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the width for larger screens */
+    margin: 0 auto;
+}
+
+/* Style the left section (image) */
+.image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow effect */
+}
+
+/* Style the right section (content) */
+.content {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+/* Heading styles */
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content h1 span {
+    color: #4CAF50; /* Green accent color for the name */
+}
+
+/* Paragraph styling */
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.content .btn button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.content .btn button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack the image and content vertically on small screens */
+        padding: 40px 20px;
+    }
+
+    .image {
+        max-width: 80%; /* Ensure the image is not too large */
+        margin-bottom: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center; /* Center the text on small screens */
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+#about .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+    #about .about-image img {
+        max-width: 90vw; 
+        max-height: 70vh; 
+        width: auto; 
+        height: auto; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        #about .about-image img:hover {
+            transform: scale(1.02); 
+        }
+
+#skills .skills-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+    #skills .skills-image img {
+        max-width: 90vw;
+        max-height: 70vh;
+        width: auto;
+        height: auto; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        #skills .skills-image img:hover {
+            transform: scale(1.02); /* Slight zoom on hover */
+        }
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* Adding a beautiful background to the response section */
+#response {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('background-image.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Style for the response form */
+.response-form {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .response-form h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+    .form-group label {
+        font-size: 16px;
+        color: #ddd;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+    .response-form {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #6d4300;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6d4300;
+        }
+
+.submit-btn {
+    background-color: #6d4300;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .submit-btn:hover {
+        background-color: #8a5c0a;
+        transform: scale(1.05);
+    }
